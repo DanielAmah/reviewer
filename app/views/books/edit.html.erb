@@ -2,11 +2,11 @@
 <div class="edit-book-form">
     <h1>Edit Book</h1>
     <%= simple_form_for @book, :html => { :multipart => true } do |f| %>
-        <%= f.select :category_id, @categories %>
-        <%= f.file_field :book_img %>
-        <%= f.input :title, label: "Book Title" %>
-        <%= f.input :description %>
-        <%= f.input :author %>
+        <%= f.select :category_id, @categories, required: true %>
+        <%= f.file_field :book_img, required: true %>
+        <%= f.input :title, label: "Book Title" , required: true %>
+        <%= f.input :description, required: true %>
+        <%= f.input :author, required: true %>
         <%= f.button :submit, :class => 'btn-custom2' %>
     <% end %>
 </div>
