@@ -12,6 +12,12 @@
 
 ActiveRecord::Schema.define(version: 20170904213928) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "SequelizeMeta", primary_key: "name", id: :string, limit: 255, force: :cascade do |t|
+  end
+
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.text "description"
