@@ -22,6 +22,7 @@ gem 'simple_form', '~> 3.5'
 gem 'paperclip', '~> 5.1'
 
 
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
