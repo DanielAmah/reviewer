@@ -33,4 +33,18 @@ describe "routing to books" do
       id: "1"
     )
     end
+    it "routes /books/1 to products#update" do
+    expect(put: "/books/1").to route_to(
+      controller: "books",
+      action: "update",
+      id: "1"
+    )
+    end
+    it "routes /books/1 to books#destroy" do
+    expect(delete: "/books/1").to route_to(
+      controller: "books",
+      action: "destroy",
+      id: "1"
+    )
+    end
 end
