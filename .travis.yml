@@ -1,10 +1,8 @@
 
 rvm:
   - 2.4
-  - 1.8
 
 env:
-  - DB=sqlite
   - DB=postgresql
 
 before_script:
