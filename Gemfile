@@ -7,6 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'coveralls', require: false
 gem 'rails', '~> 5.1.3'
 gem 'pg'
 gem 'puma', '~> 3.7'
@@ -27,11 +28,20 @@ gem 'paperclip', '~> 5.1'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'coveralls', require: false
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
+
+end
+
+group :test do
+   gem 'coveralls', require: false
+   gem 'capybara', '~> 2.13'
+   gem 'selenium-webdriver'
+   gem 'database_cleaner'
+   gem 'simplecov', :require => false
 end
 
 group :development do
@@ -42,6 +52,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

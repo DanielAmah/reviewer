@@ -1,0 +1,21 @@
+
+rvm:
+  - 2.4
+  - 1.8
+
+env:
+  - DB=sqlite
+  - DB=postgresql
+
+before_script:
+  - psql -c 'create database myapp_test' -U postgres
+
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rake test
+
+bundler_args: --binstubs=./bundler_stubs
+
+after_success:
+  - coveralls
