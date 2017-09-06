@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class BooksControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+   setup do
+    @books = books(:one)
+  end
+  test "should get index page" do
+		get :index
+    assert_response :success
+	end
 end

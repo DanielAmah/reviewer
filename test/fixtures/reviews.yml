@@ -5,5 +5,5 @@ one:
   comment: MyText
 
 two:
-  rating: 1
-  comment: MyText
+  rating: 4
+  comment: AnotherText
