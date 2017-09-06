@@ -1,8 +1,9 @@
 require 'simplecov'
-SimpleCov.start
+ require 'coveralls'
 
 # Coveralls
- require 'coveralls'
+
+ SimpleCov.start
  Coveralls.wear!('rails')
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
