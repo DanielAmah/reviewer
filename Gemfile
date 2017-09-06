@@ -33,7 +33,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'coveralls', require: false
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-
+  gem 'shoulda', '~> 3.5'
+  gem 'shoulda-matchers'
 end
 
 group :test do

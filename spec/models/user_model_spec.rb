@@ -14,3 +14,9 @@ RSpec.describe User, :type => :model do
   end
 end
 
+
+RSpec.describe User, :type => :model do
+  it { should have_many(:books) }
+  it { should have_many(:reviews) }
+end
+
